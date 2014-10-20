@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Como manter um blog incrivelmente rápido e gratuito com Ghost, Buster e Github Pages</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=ef5e897401" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <meta name="generator" content="Ghost 0.5" />
+<link rel="canonical" href="http://luizfaias.com/como-manter-um-blog-incrivelmente-rapido-e-gratuito/" />
+</head>
+<body class="post-template tag-tecnologia tag-comofaz">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="http://luizfaias.com">Home</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-tecnologia tag-comofaz">
+
+        <header class="post-header">
+            <h1 class="post-title">Como manter um blog incrivelmente rápido e gratuito com Ghost, Buster e Github Pages</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2014-10-20">20 Outubro 2014</time>  em <a href="../tag/tecnologia/">tecnologia</a>, <a href="../tag/comofaz/">comofaz</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Já falei anteriormente sobre o <a href="http://luizfaias.com/ghost-uma-plataforma-para-blogs-gratuita-e-facil-de-usar">Ghost, a plataforma que utilizo</a> para publicar este singelo blog.</p>
+
+<p>Agora quero mostrar como é possível hospedá-lo gratuitamente e deixá-lo incrivelmente rápido, para que você possa fazer o mesmo.</p>
+
+<p>Para os apressados (<a href="http://www.urbandictionary.com/define.php?term=tl%3Bdr">TL;DR</a>) = use o <a href="https://github.com/axitkhurana/buster">Buster</a> para gerar conteúdo estático e subir os arquivos para o <a href="https://pages.github.com">Github Pages</a>.</p>
+
+<h2 id="requisitos">Requisitos</h2>
+
+<p>Você precisará ter pelo menos uma noção do que seja:</p>
+
+<ul>
+<li>linha de comando - também serve CLI, console, terminal ou bash :)</li>
+<li><a href="http://git-scm.com">git</a> e seu amigo <a href="https://github.com">Github</a></li>
+<li><a href="https://www.python.org">python</a> e pip</li>
+<li><a href="http://nodejs.org">node.js</a></li>
+<li>o próprio <a href="https://ghost.org">Ghost</a></li>
+</ul>
+
+<h2 id="instalao">Instalação</h2>
+
+<h4 id="ghost">Ghost</h4>
+
+<p>Baixe a última versão em <a href='http://ghost.org/download'>http://ghost.org/download</a></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815057/ghost_download_fe5cxr.png" alt="Download Ghost" /></p>
+
+<p>Descompacte o arquivo .zip e terá uma estrutura de arquivos como esta:</p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815335/ghost_zipfile_ahi9j8.png" alt="Arquivo zip" /></p>
+
+<p>Instale as dependências com <strong><code>npm install</code></strong></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815195/npm_install_bftbmy.png" alt="NPM install" /></p>
+
+<p>Suba o servidor com <strong><code>npm start</code></strong></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815251/npm_start_maunzj.png" alt="NPM start" /></p>
+
+<p>Agora você tem um belo blog rodando em <a href='../'>http://127.0.0.1:2368</a></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815443/ghost_localhost_jcqabl.png" alt="localhost" /></p>
+
+<h4 id="truquemanjadogithubpages">Truque manjado: Github Pages</h4>
+
+<p>A próxima etapa é criar um repositório para hospedar seu site <strong><em>gratuitamente</em></strong>. Para isso, siga as <a href="https://pages.github.com">instruções do Github Pages</a>.</p>
+
+<p>No meu caso, criei o seguinte repo: <a href='http://github.com/luizfaias/luizfaias.github.io'>http://github.com/luizfaias/luizfaias.github.io</a></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815897/github_repo_bkqqxp.png" alt="Github repo" /></p>
+
+<p>O Github, assim como diversas empresas famosas como Twitter, Kickstaster, New Relic, Pinterest e Shazam, usa o <a href="https://www.fastly.com">CDN da Fastly</a> (sim, eu também não conhecia). Isso deixa seu blog absurdamente rápido. E foi issi que te interessou no título do post, não foi?</p>
+
+<h4 id="truquedomistermbuster">Truque do Mister M: Buster</h4>
+
+<p>Conheça agora o <a href="https://github.com/axitkhurana/buster">Buster</a>. Com ele você conseguirá gerar o conteúdo estático do seu site Ghost.</p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816277/github_buster_ho6vjz.png" alt="Projeto Buster no Github" /></p>
+
+<p>Baixe-o executando <strong><code>pip install buster</code></strong></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816430/pip_install_buster_xhlyh3.png" alt="pip install buster" /></p>
+
+<p>Aponte para o seu repositório com <strong><code>buster setup</code></strong></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816528/buster_setup_japvfv.png" alt="buster setup" /></p>
+
+<p>Ainda com o servidor rodando, gere o conteúdo estático com <strong><code>buster generate</code></strong></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816620/buster_generate_lehrsg.png" alt="buster generate" /></p>
+
+<p>Crie um redirecionamento para o seu domínio principal com <strong><code>buster add-domain</code></strong> (opcional)</p>
+
+<p>Mais informações sobre DNS e CNAME <a href="https://help.github.com/articles/adding-a-cname-file-to-your-repository">neste link aqui</a>.</p>
+
+<p>exemplo: quando alguém acessar <a href="http://luizfaias.github.io">luizfaias.github.io</a> será redirecionado para <a href="http://luizfaias.com">luizfaias.com</a></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816778/buster_add-domain_kgkef4.png" alt="buster add-domain" /></p>
+
+<p>Finalmente, suba os arquivos para seu repositório com <strong><code>buster deploy</code></strong></p>
+
+<p><img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816876/buster_deploy_jv81jx.png" alt="buster deploy" /></p>
+
+<h2 id="concluso">Conclusão</h2>
+
+<p>Aí você me pergunta:</p>
+
+<p>— Então quer dizer que eu precisarei subir o servidor do Ghost na minha máquina e rodar esses comandos toda vez que quiser adicionar um novo post?</p>
+
+<p>E eu te respondo:</p>
+
+<p>— Sim, <strong>mas</strong> como um bom programador, você ficará incomodado com isso e automatizará essa tarefa.</p>
+
+<p>Criei basicamente 2 scripts:</p>
+
+<ul>
+<li><strong><code>alias ghost</code></strong> = <strong><code>cd ~/Dropbox/ghost-0.5.2 &amp;&amp; npm start</code></strong></li>
+<li><strong><code>deploy-ghost</code></strong> = gera o conteúdo estático, traduz o site para português e sobe as alterações para o Github</li>
+</ul>
+
+<h5 id="dropbox">Dropbox</h5>
+
+<p>Para não perder esse precioso conteúdo que você lê agora, faço backup da instalação do Ghost no Dropbox.</p>
+
+<h5 id="meufluxodetrabalho">Meu fluxo de trabalho</h5>
+
+<p>Quando quero escrever um novo post (<a href="http://dontpad.com/!/42bb4aa2091eba2cc9188227ca47c58fae3a099c">religiosamente a cada 2 semanas</a>), sigo estes passos:</p>
+
+<ol>
+<li>entro no terminal  </li>
+<li>chamo o alias <strong><em>ghost</em></strong> (sobe a aplicação em <a href='http://127.0.0.1:23368'>http://127.0.0.1:23368</a>)  </li>
+<li>escrevo o post  </li>
+<li>executo o script <strong><em>deploy-ghost</em></strong> <br />
+exemplo aqui: <a href='https://gist.github.com/luizfaias/c3ecab042a175c096f49'>https://gist.github.com/luizfaias/c3ecab042a175c096f49</a></li>
+</ol>
+
+<h2 id="finalizandodeverdade">Finalizando de verdade</h2>
+
+<p>Provavelmente esse tutorial ficará desatualizado dentro de alguns dias ou semanas. Então, se tiver algum elogio, crítica ou dúvida, deixa um comentário aqui embaixo!</p>
+
+<p>Flôp!</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/junior/" style="background-image: url(http://www.gravatar.com/avatar/9f244e529d75a4472f1dc276fefbe0b7?d=404&amp;s=250)"><span class="hidden">Luiz Faias's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/junior/">Luiz Faias</a></h4>
+
+                    <p>Leia <a href="../author/junior/">mais artigos</a> deste autor.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">St. Albans, UK</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Compartilhe!</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Como%20manter%20um%20blog%20incrivelmente%20r%C3%A1pido%20e%20gratuito%20com%20Ghost%2C%20Buster%20e%20Github%20Pages&amp;url=http://luizfaias.com/como-manter-um-blog-incrivelmente-rapido-e-gratuito/"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://luizfaias.com/como-manter-um-blog-incrivelmente-rapido-e-gratuito/"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://luizfaias.com/como-manter-um-blog-incrivelmente-rapido-e-gratuito/"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'luizfaias';
+            var disqus_identifier = '';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+         <section class="copyright"><a href="http://luizfaias.com">Luiz Faias</a> &copy; 2014</section>
+         <section class="poweredby">Publicado com <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+
+    <script src="../public/jquery.js?v=ef5e897401"></script>
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=ef5e897401"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=ef5e897401"></script>
+
+</body>
+</html>
