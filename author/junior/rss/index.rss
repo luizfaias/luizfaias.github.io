@@ -1,0 +1,368 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Luiz Faias - Luiz Faias</title><description>Luiz Faias - Luiz Faias</description><link>http://luizfaias.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Thu, 23 Oct 2014 16:45:55 GMT</lastBuildDate><atom:link href="http://luizfaias.com/author/junior/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Como manter um blog incrivelmente rápido e gratuito com Ghost, Buster e Github Pages</title><description>&lt;p&gt;Já falei anteriormente sobre o &lt;a href="http://luizfaias.com/ghost-uma-plataforma-para-blogs-gratuita-e-facil-de-usar"&gt;Ghost, a plataforma que utilizo&lt;/a&gt; para publicar este singelo blog.&lt;/p&gt;
+
+&lt;p&gt;Agora quero mostrar como é possível hospedá-lo gratuitamente e deixá-lo incrivelmente rápido, para que você possa fazer o mesmo.&lt;/p&gt;
+
+&lt;p&gt;Para os apressados (&lt;a href="http://www.urbandictionary.com/define.php?term=tl%3Bdr"&gt;TL;DR&lt;/a&gt;) = use o &lt;a href="https://github.com/axitkhurana/buster"&gt;Buster&lt;/a&gt; para gerar conteúdo estático e subir os arquivos para o &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="requisitos"&gt;Requisitos&lt;/h2&gt;
+
+&lt;p&gt;Você precisará ter pelo menos uma noção do que seja:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;linha de comando - também serve CLI, console, terminal ou bash :)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://git-scm.com/"&gt;git&lt;/a&gt; e seu amigo &lt;a href="https://github.com/"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/"&gt;python&lt;/a&gt; e pip&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://nodejs.org/"&gt;node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;o próprio &lt;a href="https://ghost.org/"&gt;Ghost&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="instalao"&gt;Instalação&lt;/h2&gt;
+
+&lt;h4 id="ghost"&gt;Ghost&lt;/h4&gt;
+
+&lt;p&gt;Baixe a última versão em &lt;a href="http://ghost.org/download"&gt;http://ghost.org/download&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815057/ghost_download_fe5cxr.png" alt="Download Ghost"&gt;&lt;/p&gt;
+
+&lt;p&gt;Descompacte o arquivo .zip e terá uma estrutura de arquivos como esta:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815335/ghost_zipfile_ahi9j8.png" alt="Arquivo zip"&gt;&lt;/p&gt;
+
+&lt;p&gt;Instale as dependências com &lt;strong&gt;&lt;code&gt;npm install&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815195/npm_install_bftbmy.png" alt="NPM install"&gt;&lt;/p&gt;
+
+&lt;p&gt;Suba o servidor com &lt;strong&gt;&lt;code&gt;npm start&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815251/npm_start_maunzj.png" alt="NPM start"&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora você tem um belo blog rodando em &lt;a href="http://localhost:2368/"&gt;http://localhost:2368&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815443/ghost_localhost_jcqabl.png" alt="localhost"&gt;&lt;/p&gt;
+
+&lt;h4 id="truquemanjadogithubpages"&gt;Truque manjado: Github Pages&lt;/h4&gt;
+
+&lt;p&gt;A próxima etapa é criar um repositório para hospedar seu site &lt;strong&gt;&lt;em&gt;gratuitamente&lt;/em&gt;&lt;/strong&gt;. Para isso, siga as &lt;a href="https://pages.github.com/"&gt;instruções do Github Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;No meu caso, criei o seguinte repo: &lt;a href="http://github.com/luizfaias/luizfaias.github.io"&gt;http://github.com/luizfaias/luizfaias.github.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413815897/github_repo_bkqqxp.png" alt="Github repo"&gt;&lt;/p&gt;
+
+&lt;p&gt;O Github, assim como diversas empresas famosas como Twitter, Kickstaster, New Relic, Pinterest e Shazam, usa o &lt;a href="https://www.fastly.com/"&gt;CDN da Fastly&lt;/a&gt; (sim, eu também não conhecia). Isso deixa seu blog absurdamente rápido. E foi issi que te interessou no título do post, não foi?&lt;/p&gt;
+
+&lt;h4 id="truquedomistermbuster"&gt;Truque do Mister M: Buster&lt;/h4&gt;
+
+&lt;p&gt;Conheça agora o &lt;a href="https://github.com/axitkhurana/buster"&gt;Buster&lt;/a&gt;. Com ele você conseguirá gerar o conteúdo estático do seu site Ghost.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816277/github_buster_ho6vjz.png" alt="Projeto Buster no Github"&gt;&lt;/p&gt;
+
+&lt;p&gt;Baixe-o executando &lt;strong&gt;&lt;code&gt;pip install buster&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816430/pip_install_buster_xhlyh3.png" alt="pip install buster"&gt;&lt;/p&gt;
+
+&lt;p&gt;Aponte para o seu repositório com &lt;strong&gt;&lt;code&gt;buster setup&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816528/buster_setup_japvfv.png" alt="buster setup"&gt;&lt;/p&gt;
+
+&lt;p&gt;Ainda com o servidor rodando, gere o conteúdo estático com &lt;strong&gt;&lt;code&gt;buster generate&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816620/buster_generate_lehrsg.png" alt="buster generate"&gt;&lt;/p&gt;
+
+&lt;p&gt;Crie um redirecionamento para o seu domínio principal com &lt;strong&gt;&lt;code&gt;buster add-domain&lt;/code&gt;&lt;/strong&gt; (opcional)&lt;/p&gt;
+
+&lt;p&gt;Mais informações sobre DNS e CNAME &lt;a href="https://help.github.com/articles/adding-a-cname-file-to-your-repository"&gt;neste link aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;exemplo: quando alguém acessar &lt;a href="http://luizfaias.github.io/"&gt;luizfaias.github.io&lt;/a&gt; será redirecionado para &lt;a href="http://luizfaias.com/"&gt;luizfaias.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816778/buster_add-domain_kgkef4.png" alt="buster add-domain"&gt;&lt;/p&gt;
+
+&lt;p&gt;Finalmente, suba os arquivos para seu repositório com &lt;strong&gt;&lt;code&gt;buster deploy&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1413816876/buster_deploy_jv81jx.png" alt="buster deploy"&gt;&lt;/p&gt;
+
+&lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Aí você me pergunta:&lt;/p&gt;
+
+&lt;p&gt;— Então quer dizer que eu precisarei subir o servidor do Ghost na minha máquina e rodar esses comandos toda vez que quiser adicionar um novo post?&lt;/p&gt;
+
+&lt;p&gt;E eu te respondo:&lt;/p&gt;
+
+&lt;p&gt;— Sim, &lt;strong&gt;mas&lt;/strong&gt; como um bom programador, você ficará incomodado com isso e automatizará essa tarefa.&lt;/p&gt;
+
+&lt;p&gt;Criei basicamente 2 scripts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;alias ghost&lt;/code&gt;&lt;/strong&gt; = &lt;strong&gt;&lt;code&gt;cd ~/Dropbox/ghost-0.5.2 &amp;amp;&amp;amp; npm start&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;deploy-ghost&lt;/code&gt;&lt;/strong&gt; = gera o conteúdo estático, traduz o site para português e sobe as alterações para o Github&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id="dropbox"&gt;Dropbox&lt;/h5&gt;
+
+&lt;p&gt;Para não perder esse precioso conteúdo que você lê agora, faço backup da instalação do Ghost no Dropbox.&lt;/p&gt;
+
+&lt;h5 id="meufluxodetrabalho"&gt;Meu fluxo de trabalho&lt;/h5&gt;
+
+&lt;p&gt;Quando quero escrever um novo post (&lt;a href="http://dontpad.com/!/42bb4aa2091eba2cc9188227ca47c58fae3a099c"&gt;religiosamente a cada 2 semanas&lt;/a&gt;), sigo estes passos:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;entro no terminal  &lt;/li&gt;
+&lt;li&gt;chamo o alias &lt;strong&gt;&lt;em&gt;ghost&lt;/em&gt;&lt;/strong&gt; (sobe a aplicação em &lt;a href="http://localhost:2368/"&gt;http://localhost:2368&lt;/a&gt;)  &lt;/li&gt;
+&lt;li&gt;escrevo o post  &lt;/li&gt;
+&lt;li&gt;executo o script &lt;strong&gt;&lt;em&gt;deploy-ghost&lt;/em&gt;&lt;/strong&gt; &lt;br&gt;
+exemplo aqui: &lt;a href="https://gist.github.com/luizfaias/c3ecab042a175c096f49"&gt;https://gist.github.com/luizfaias/c3ecab042a175c096f49&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="finalizandodeverdade"&gt;Finalizando de verdade&lt;/h2&gt;
+
+&lt;p&gt;Provavelmente esse tutorial ficará desatualizado dentro de alguns dias ou semanas. Então, se tiver algum elogio, crítica ou dúvida, deixa um comentário aqui embaixo!&lt;/p&gt;
+
+&lt;p&gt;Flôp!&lt;/p&gt;</description><link>http://luizfaias.com/como-manter-um-blog-incrivelmente-rapido-e-gratuito/</link><guid isPermaLink="false">bf12e148-e663-403e-973a-452712c4900e</guid><category>tecnologia</category><category>comofaz</category><dc:creator>Luiz Faias</dc:creator><pubDate>Mon, 20 Oct 2014 14:04:56 GMT</pubDate></item><item><title>Sou pessimista e assumo</title><description>&lt;p&gt;Algumas pessoas mais próximas já chamaram minha atenção para esse ponto, mas nunca levei o assunto tão a sério: sou pessimista 99% do tempo. Com muito esforço consigo ser realista às vezes, mas raramente encaro os problemas ou situações com otimismo.&lt;/p&gt;
+
+&lt;p&gt;Meu padrão de pensamento é pensar em todas as possíveis exceções, nunca me preocupando com as regras.&lt;/p&gt;
+
+&lt;p&gt;Acredito que muitos não tenham tido a coragem de "jogar isso na minha cara", então aqui estou eu, pedindo sua ajuda para que possa melhorar. Estou completamente aberto a ouvir a sua opinião, sem me sentir com raiva ou ofendido.&lt;/p&gt;
+
+&lt;p&gt;Hoje vejo que sempre fui uma pessoa triste e vi o lado ruim de todas as coisas, mas estou disposto a mudar. Fui muito egoísta e nunca me preocupei genuinamente com ninguém. Sempre olhei para quem estava por perto e nem liguei para aqueles mais distantes. Não tive sequer a capacidade de lembrar de um aniversário e desejar que o dia daquela pessoa fosse bem aproveitado.&lt;/p&gt;
+
+&lt;p&gt;Percebo que falhei demais e quero reverter esse cenário. Por onde devo começar?&lt;/p&gt;</description><link>http://luizfaias.com/sou-pessimista-e-assumo/</link><guid isPermaLink="false">745d94e2-2c63-4060-974f-9158004b03a8</guid><category>filosofia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Fri, 05 Sep 2014 15:39:13 GMT</pubDate></item><item><title>Dá pra voltar?</title><description>&lt;p&gt;O que vim fazer aqui? &lt;br&gt;
+Qual é a razão de tudo isso?&lt;/p&gt;
+
+&lt;p&gt;Por mais que uma resposta venha, como "estamos aqui para evoluir", isso não me conforta. Por mais que eu entenda (e até veja certa lógica) a explicação de que temos várias oportunidades de encarnar neste lugar para nos tornarmos cada dia mais conscientes, não consigo enxergar a finalidade de todo esse sistema extremamente complexo que é o universo conhecido.&lt;/p&gt;
+
+&lt;p&gt;Supondo que consigamos atingir um grau muito elevado de iluminação e nos tornemos "auxiliares do cosmos". Mesmo assim ainda mantenho as perguntas: por que? para que? para quem?&lt;/p&gt;
+
+&lt;p&gt;Talvez eu passe a vida inteira com essa dúvida, ou talvez não esteja vendo as coisas claramente e estou aceitando ideias que me foram ensinadas.&lt;/p&gt;
+
+&lt;p&gt;Quando os mestres nos dizem para vivermos o presente, estão nos poupando de querer encontrar tais respostas, já que não estamos em condições de respondê-las?&lt;/p&gt;
+
+&lt;p&gt;É possível ser feliz apenas tentando fazer com que a mente "esqueça" essa questão e viva o dia-a-dia?&lt;/p&gt;
+
+&lt;p&gt;É melhor permanecer na ignorância e não se preocupar com tudo isso? É "certo" voltar para a caverna e fingir que esses questionamentos um dia existiram?&lt;/p&gt;
+
+&lt;p&gt;Hoje não me importo com o "de onde viemos" ou "para onde vamos", mas me correm os pensamentos como "por que vamos" e "se realmente vamos".&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://luizfaias.com/sem-ilusao-nao-ha-iluminacao"&gt;A caverna&lt;/a&gt; é confortável, é previsível, é fácil, é quente e está repleta de amigos. É possível achar o caminho de volta?&lt;/p&gt;</description><link>http://luizfaias.com/da-pra-voltar/</link><guid isPermaLink="false">57f0ef80-6ab1-43a0-b2d1-560069ff79b7</guid><category>filosofia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Fri, 05 Sep 2014 15:38:55 GMT</pubDate></item><item><title>Como hackear o sistema?</title><description>&lt;p&gt;Fugir do Brasil foi uma ação totalmente consciente, pois não aguentava mais pensar que passaria minha vida inteira sem tentar algo diferente. Só que a alegria durou pouco.&lt;/p&gt;
+
+&lt;p&gt;Passamos 4 meses excelentes viajando e conhecendo novos lugares, diferentes culturas e pessoas maravilhosas, que nos receberam e acolheram como se fizéssemos parte de suas famílias.&lt;/p&gt;
+
+&lt;p&gt;Então chegou a hora de voltar à "realidade" e planejar como continuaríamos a nos sustentar. A ideia inicial era procurar trabalho em uma nova área, fora do meio de desenvolvimento de software, mas não foi esse o rumo que a vida tomou.&lt;/p&gt;
+
+&lt;p&gt;"Surpreendentemente" recebi uma oferta de emprego praticamente idêntica à que vinha desenvolvendo no Brasil, em uma empresa de tecnologia dentro da área de supermercados. E aí começou o problema.&lt;/p&gt;
+
+&lt;p&gt;Em poucas semanas percebi que não é isso que quero para o meu futuro. Apesar de parecer uma oportunidade dos sonhos para qualquer pessoa (receber um ótimo salário e ter todo o conforto e segurança de uma linda cidade no interior da Inglaterra), não consigo achar um propósito maior.&lt;/p&gt;
+
+&lt;p&gt;A grande questão agora é: como hackear o sistema? Como executar uma atividade que me preencha e ao mesmo tempo beneficie os demais, sendo que precisamos do dinheiro para nos manter? Não estou atrás do luxo, mas do mínimo conforto para desempenhar qualquer trabalho.&lt;/p&gt;</description><link>http://luizfaias.com/como-hackear-o-sistema/</link><guid isPermaLink="false">938c7796-5682-4c1c-8efa-897286c976b7</guid><category>filosofia</category><category>capitalismo</category><dc:creator>Luiz Faias</dc:creator><pubDate>Fri, 05 Sep 2014 15:38:31 GMT</pubDate></item><item><title>Você não é insubstituível</title><description>&lt;p&gt;As grandes cidades vendem o sonho do bom emprego, do dinheiro "fácil" e do sucesso, mas por trás de tudo isso está um sistema nojento, por falta de um adjetivo melhor.&lt;/p&gt;
+
+&lt;p&gt;Tudo começa muito cedo, quando você, ainda criança, entra no processo de "formação" escolar. Professores cospem milhares de informações e te formatam para a prova decisiva: prestar o vestibular e escolher a carreira que seguirá pelo resto da vida.&lt;/p&gt;
+
+&lt;p&gt;Depois você entra na faculdade e começa a ser conduzido para o &lt;em&gt;mercado de trabalho&lt;/em&gt;, novamente recebendo toda a preparação necessária para seu desenvolvimento profissional. Com sorte, conseguirá um "bom emprego", com estabilidade e um monte de benefícios.&lt;/p&gt;
+
+&lt;p&gt;Agora sim! Você está pronto para acordar cedo, passar horas no trânsito, trabalhar um mínimo de 8 horas, voltar pra casa e assistir o jornal e a novela. Você é mais um em meio a tantos milhões que mantêm exatamente a mesma rotina.&lt;/p&gt;
+
+&lt;p&gt;Você é uma pequena peça em toda essa engrenagem. E o pior de tudo: &lt;strong&gt;completamente substituível&lt;/strong&gt;.&lt;/p&gt;</description><link>http://luizfaias.com/voce-nao-e-insubstituivel/</link><guid isPermaLink="false">837c88dd-8043-44a4-b7ce-08772ff87eff</guid><category>filosofia</category><category>capitalismo</category><dc:creator>Luiz Faias</dc:creator><pubDate>Wed, 03 Sep 2014 21:53:54 GMT</pubDate></item><item><title>Eating your own dog food</title><description>&lt;p&gt;Quando você se cadastra para uma &lt;a href="https://www.linkedin.com/company/linkedin/careers"&gt;vaga na LinkedIn&lt;/a&gt;, imagina que eles devam usar sua própria ferramenta para receber os currículos e avaliar os candidatos, certo?&lt;/p&gt;
+
+&lt;p&gt;Errado! Em vez disso, eles usam o serviço da empresa &lt;a href="http://jobvite.com/"&gt;Jobvite&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1405953310/linkedin_jobvite_atwf8x.png" alt="LinkedIn"&gt;&lt;/p&gt;
+
+&lt;p&gt;E o que isso tem a ver com o título do post? A gíria &lt;a href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food"&gt;"Eating your own dog food"&lt;/a&gt; ou simplesmente "Dogfooding" é usada quando uma empresa usa seus próprios produtos para aprimorá-los antes que sejam lançados no mercado.&lt;/p&gt;
+
+&lt;p&gt;Um exemplo clássico dessa atitude pode ser encontrado no Google, que &lt;a href="http://www.amazon.com/In-The-Plex-Google-Thinks/dp/1455875724"&gt;disponibilizou milhares de celulares rodando Android&lt;/a&gt; aos seus colaboradores antes de serem vendidos aos meros mortais.&lt;/p&gt;
+
+&lt;p&gt;A questão é a seguinte: se nem a própria empresa utiliza seu produto, quem deverá utilizar?&lt;/p&gt;
+
+&lt;p&gt;Não estou reclamando da ferramenta no geral. Ela é excelente para pessoas que estão à procura de vagas, mas não sei se contrataria o serviço deles como um anunciante ou gestor de RH.&lt;/p&gt;
+
+&lt;p&gt;Obs: procurei saber se a empresa Jobvite faz parte do mesmo grupo da LinkedIn, mas não encontrei nada a esse respeito nas internets.&lt;/p&gt;</description><link>http://luizfaias.com/eating-your-own-dog-food/</link><guid isPermaLink="false">c96e554a-0557-488a-b814-a7673f412dcb</guid><category>tecnologia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Mon, 21 Jul 2014 14:58:34 GMT</pubDate></item><item><title>Moleskine, café e Macbook</title><description>&lt;p&gt;Todo site moderno precisa ter uma imagem de fundo contendo 3 elementos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;um Moleskine ou agenda&lt;/li&gt;
+&lt;li&gt;uma xícara de café&lt;/li&gt;
+&lt;li&gt;um Macbook Pro&lt;/li&gt;
+&lt;li&gt;opcional: tudo isso sobre uma mesa de madeira&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Esse aqui não poderia ficar de fora, então aqui vai:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_700/v1405185320/Smooth-Touch-Workspace-1300x866_x6s2l0.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;imagem gratuita fornecida pelo &lt;a href="http://picjumbo.com/"&gt;PicJumbo&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><link>http://luizfaias.com/moleskine-cafe-e-macbook/</link><guid isPermaLink="false">b4842c30-f128-4da5-987a-a9f886efc937</guid><category>design</category><dc:creator>Luiz Faias</dc:creator><pubDate>Sat, 12 Jul 2014 17:22:00 GMT</pubDate></item><item><title>Encontrando sua vocação</title><description>&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,h_394,r_0,w_700/v1400357620/Depositphotos_4497340_xl_d7fyug.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;Acabei de assistir uma palestra bem interessante do professor &lt;strong&gt;Roman Krznaric&lt;/strong&gt; entitulada &lt;strong&gt;&lt;a href="http://greatergood.berkeley.edu/article/item/six_tips_for_making_the_leap_to_meaningful_work"&gt;How to Find Fulfilling Work&lt;/a&gt;&lt;/strong&gt; e aqui estão alguns pontos que considero importantes.&lt;/p&gt;
+
+&lt;p&gt;O maior erro que você pode cometer quando deseja mudar sua carreira é usar o modelo de "planejar e implementar", ou seja, fazer uma reflexão profunda sobre seus valores, suas fraquezas, habilidades e ambições e tentar casá-los com alguma profissão. Esse modelo pode funcionar muito bem para encontrar um emprego, mas não será necessariamente um trabalho que o tornará uma pessoa realizada.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;"Onde as necessidades do mundo e seus talentos se cruzam, aí está a sua vocação."&lt;/p&gt;
+  
+  &lt;p&gt;– Aristóteles&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Roman sugere inverter a ordem das coisas, usando o modelo "Aja primeiro, reflita depois" onde você conduz experiências e busca extrair lições práticas do que deu ou não deu certo. Você pode ir pelo caminho "radical", executando dezenas de trabalhos diferentes até que encontre aquele que lhe preencha. Também pode optar pelo caminho suave, mantendo seu emprego atual e conduzindo experimentos em seu tempo livre.&lt;/p&gt;
+
+&lt;p&gt;E você? Quer continuar fazendo parte do crescente grupo de pessoas que não acham sentido em seu trabalho?&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/1y6417fnIKU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</description><link>http://luizfaias.com/encontrando-sua-vocacao/</link><guid isPermaLink="false">c945d15f-a172-4c1f-be90-7ea6678bd565</guid><category>filosofia</category><category>carreira</category><dc:creator>Luiz Faias</dc:creator><pubDate>Sat, 17 Maio 2014 19:17:00 GMT</pubDate></item><item><title>Não quero mais</title><description>&lt;p&gt;não quero mais...&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;torcer&lt;/strong&gt; pelo "meu" time &lt;br&gt;
+&lt;strong&gt;acompanhar&lt;/strong&gt; a novela &lt;br&gt;
+&lt;strong&gt;levar vantagem&lt;/strong&gt; em tudo &lt;br&gt;
+&lt;strong&gt;subornar&lt;/strong&gt; o policial &lt;br&gt;
+&lt;strong&gt;parcelar&lt;/strong&gt; a compra do mês &lt;br&gt;
+&lt;strong&gt;ter medo&lt;/strong&gt; de andar na rua &lt;br&gt;
+&lt;strong&gt;sonhar&lt;/strong&gt; com a casa própria &lt;br&gt;
+&lt;strong&gt;contribuir&lt;/strong&gt; com o sindicato &lt;br&gt;
+&lt;strong&gt;sonegar&lt;/strong&gt; o imposto &lt;br&gt;
+&lt;strong&gt;pagar&lt;/strong&gt; a escola particular, o plano de saúde&lt;/p&gt;
+
+&lt;p&gt;não quero mais ser o típico brasileiro.&lt;/p&gt;</description><link>http://luizfaias.com/nao-quero-mais/</link><guid isPermaLink="false">276dc552-67e6-42aa-adb3-12e44dc79bbd</guid><category>filosofia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Wed, 29 Jan 2014 03:32:00 GMT</pubDate></item><item><title>Caixinha de natal: paixão nacional</title><description>&lt;p&gt;Ao chegar em casa essa semana, me deparei com a seguinte mensagem, colada no elevador:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_800/v1387263823/caixinha_2013_zv7vta.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;Como interpreto esse tipo de texto:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ao longo deste ano, nossos &lt;del&gt;funcionários&lt;/del&gt; colaboradores (terceirizados, é claro, para evitar problemas judiciais) fizeram exatamente o que deveriam ter feito, portanto merecem nosso reconhecimento em forma de uma caixinha.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aproveite esta excelente oportunidade de mostrar aos outros o quanto é generoso; que entrou no "espírito natalino" e pensa no próximo pelo menos uma vez por ano.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lembramos que a participação é VOLUNTÁRIA, mas como você conseguirá dormir sem fazer essa "boa ação"?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;E você? Concorda, discorda ou nunca parou pra pensar nisso?&lt;/p&gt;</description><link>http://luizfaias.com/caixinha-de-natal-paixao-nacional/</link><guid isPermaLink="false">5691bf23-b3b4-4e85-9528-e47327365fe1</guid><category>filosofia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Tue, 17 Dec 2013 07:15:00 GMT</pubDate></item><item><title>Cancelando pagamentos recorrentes no PayPal</title><description>&lt;p&gt;O texto abaixo não tem nada a ver com o conteúdo dos demais posts do blog, mas pode ser útil para alguém :-)&lt;/p&gt;
+
+&lt;p&gt;Recentemente precisei cancelar alguns perfis de cobrança recorrentes no PayPal e gastei uma boa meia hora tentando descobrir como fazer isso.&lt;/p&gt;
+
+&lt;p&gt;Pra quem não tem a menor ideia do que eu estou falando: veja aqui como isso funciona. Cobranças recorrentes são como assinaturas de revista. Com o PayPal você pode definir que todo dia 05 de cada mês um determinado cliente deve ser cobrado em R$ 100,00 por exemplo.&lt;/p&gt;
+
+&lt;p&gt;Vamos ao que interessa: como cancelar essas cobranças automáticas uma vez que você mudou a forma de cobrá-lo ou porque o cliente desistiu do seu produto/serviço?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Acesse sua conta do PayPal:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,h_875,r_0,w_1400/v1386249399/paypal_inicial_tto2f7.png" alt=""&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vá ao menu Histórico de transações &gt; Relatórios&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_1400/v1386249400/paypal_menu_relatorios_ud5vwm.png" alt=""&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Encontre o relatório chamado "Cobranças recorrentes - perfis de usuário"&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_1400/v1386249399/paypal_central_relatorios_vigzdw.png" alt=""&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pesquise qual perfil deve ser cancelado&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_1400/v1386249401/paypal_perfis_ativos_jmpkr5.png" alt=""&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clique em Cancelar e confirme a operação&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_1400/v1386249398/paypal_detalhe_perfil_q8fmzb.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;Fácil, não?&lt;/p&gt;
+
+&lt;p&gt;:D&lt;/p&gt;</description><link>http://luizfaias.com/cancelando-pagamentos-recorrentes-no-paypal/</link><guid isPermaLink="false">a6e32161-d5da-41e7-8171-95c6cf85e636</guid><category>tecnologia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Thu, 05 Dec 2013 14:03:00 GMT</pubDate></item><item><title>Sem ilusão não há iluminação</title><description>&lt;p&gt;Este artigo será o primeiro de uma série polêmica, que trará à tona questionamentos sobre crenças que temos desde pequenos, ou perguntas que nunca nos fizemos.&lt;/p&gt;
+
+&lt;p&gt;Só pelo prazer de escrever. Só pela zueira (que não tem limites).&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Quem somos e o que estamos fazendo aqui? &lt;br&gt;
+Qual é o motivo de tudo "existir"?&lt;/p&gt;
+
+&lt;p&gt;Hoje em dia temos um sistema consumista tão manipulador, que são poucos aqueles que despertam para tais questões e buscam "sair da caverna", onde permaneceram a vida inteira.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/v1383102579/ilustracao-mito-da-caverna_wtf58l.jpg" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;Compilando estudos de algumas fontes, como o budismo, taoísmo e a teosofia chego até a seguinte explicação: estamos "aqui" pois não fomos capazes de superar a matéria.&lt;/p&gt;
+
+&lt;p&gt;Nós criamos a nossa própria realidade. Prova disso são as doenças que criamos (sim, é isso mesmo) e que um dia simplesmente se manifestam em nosso corpo. Nesse momento nos colocamos na postura de vítimas, como se não tivéssemos nenhuma parcela de responsabilidade sobre o fato. Outro bom exemplo é o placebo, que "cura" aquele que acredita que algo que está fora resolverá os problemas que estão dentro.&lt;/p&gt;
+
+&lt;p&gt;Não sei dizer onde encontrei a frase &lt;strong&gt;&lt;em&gt;"sem ilusão não há iluminação"&lt;/em&gt;&lt;/strong&gt; mas ela aparece frequentemente em meus pensamentos.&lt;/p&gt;
+
+&lt;p&gt;A frase acima começa a fazer algum sentido quando associamos antigos ensinamentos das filosofias orientais com o que se conhece hoje em dia sobre as cordas dentro da física quântica. A matéria, como a imaginamos, não tem como "existir". Existe muito mais "vazio" dentro de um átomo do que matéria propriamente dita. Assim também é o pouco que conhecemos sobre o universo.&lt;/p&gt;
+
+&lt;p&gt;Para não tornar esse texto uma novela tentarei concluir o raciocínio: estamos neste mundo da &lt;strong&gt;ilusão&lt;/strong&gt; para aprender lições valiosas, que um dia nos conduzirão ao estado de &lt;strong&gt;iluminação&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Seguindo essa linha podemos dizer que o tempo não existe; que a vida e a morte também não existem, pois são faces da mesma moeda. Tudo isso é produzido pela mente limitada que temos, mas isso fica para um próximo texto.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Obs: se você não concorda com parte ou com tudo o que escrevi previamente, você está no seu direito. Não estou me preocupando com a citação de fontes. Estou totalmente aberto a discutir e mudar de opinião a qualquer momento. Não me envergonharei ao descobrir que tudo isso era bobagem.&lt;/p&gt;</description><link>http://luizfaias.com/sem-ilusao-nao-ha-iluminacao/</link><guid isPermaLink="false">efa84c51-f25f-4478-8eee-881dba408523</guid><category>filosofia</category><category>budismo</category><category>matrix</category><dc:creator>Luiz Faias</dc:creator><pubDate>Wed, 30 Oct 2013 03:48:00 GMT</pubDate></item><item><title>Ghost: uma plataforma para blogs gratuita e fácil de usar</title><description>&lt;p&gt;Desde o lançamento desse blog venho acompanhando as notícias da plataforma &lt;a href="http://ghost.org/"&gt;Ghost&lt;/a&gt; e não via a hora de começar a usá-la.&lt;/p&gt;
+
+&lt;p&gt;A migração do Wordpress para o Ghost aconteceu há duas semanas, logo que &lt;a href="http://blog.ghost.org/public-launch/"&gt;a equipe anunciou&lt;/a&gt; que o download estava disponível para o público em geral.&lt;/p&gt;
+
+&lt;p&gt;Afinal, quais são as vantagens?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;O objetivo é claro: publicar conteúdo; escrever; "bloggar". As pessoas começaram a usar o Wordpress pra tudo, com milhares de plugins e temas, e acabou virando um Frankenstein.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;É rápido, muito rápido: devido à tecnologia escolhida (&lt;a href="http://nodejs.org/"&gt;node.js&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;É elegante: o tema padrão é muito agradável. Você passa menos tempo se preocupando com o visual e mais tempo escrevendo.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Responsivo (termo da moda): todas as funcionalidades se adaptam a qualquer dispositivo.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Seguem abaixo os slides da lightning talk que apresentei no último Devshare na Bluesoft.&lt;/p&gt;
+
+&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/27353147" width="700" height="430" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen&gt; &lt;/iframe&gt;</description><link>http://luizfaias.com/ghost-uma-plataforma-para-blogs-gratuita-e-facil-de-usar/</link><guid isPermaLink="false">aaf09fd4-41f7-437b-a90d-ca400e39e0d3</guid><category>tecnologia</category><dc:creator>Luiz Faias</dc:creator><pubDate>Sun, 27 Oct 2013 18:25:00 GMT</pubDate></item><item><title>Pão de Açúcar: lugar de gente feliz?</title><description>&lt;p&gt;Hoje, por curiosidade, fui visitar dois supermercados na região nobre do Panamby: Pão de Açúcar e St. Marche (um em frente ao outro).&lt;/p&gt;
+
+&lt;p&gt;As duas lojas são muito bonitas, limpas e organizadas. Acredito que o atendimento ao cliente também seja exemplar.&lt;/p&gt;
+
+&lt;p&gt;Porém, não era esse o foco da visita. A intenção era comparar o preço de venda de vários produtos nessas lojas com os preços praticados nos supermercados que atendemos com o &lt;a href="http://www.bluesofterp.com.br/" target="_blank"&gt;ERP Bluesoft&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Estou tomando como base os preços de venda dos supermercados &lt;a href="http://site.pedreira.com/" target="_blank"&gt;Pedreira&lt;/a&gt; e &lt;a href="http://www.supermercadobembarato.com.br/" target="_blank"&gt;Bem Barato&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Veja alguns exemplos e tire suas próprias conclusões :D&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-74" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,h_480/v1381947819/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1741_ymtumr.jpg" width="360" height="480"&gt; &lt;br&gt;
+&lt;b&gt;&lt;i&gt;Iogurte Danio Danone 125g&lt;/i&gt;&lt;/b&gt; &lt;br&gt;
+Pedreira e Bem Barato: R$ 2,39 &lt;br&gt;
+St. Marche: R$ 2,49 (+4,18%) &lt;br&gt;
+Pão de Açúcar: R$ 2,99 (&lt;span style="color: #ff0000;"&gt;+25,10%&lt;/span&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-75" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_480/v1381947786/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1743_yf6kyu.jpg" width="480" height="360"&gt; &lt;br&gt;
+&lt;b&gt;&lt;i&gt;Álcool Cooperalcool Tradicional 1L&lt;/i&gt;&lt;/b&gt; &lt;br&gt;
+Pedreira e Bem Barato: &lt;b&gt;R$ 4,79&lt;/b&gt; &lt;br&gt;
+St. Marche: R$ 4,99 (+4,17%) &lt;br&gt;
+Pão de Açúcar: R$ 6,49 (&lt;span style="color: #ff0000;"&gt;+35,49%&lt;/span&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-77" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_480/v1381947777/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1742_lrbsaf.jpg" width="480" height="360"&gt; &lt;br&gt;
+&lt;b&gt;&lt;i&gt;Leite Condensado Moça Lata 395g &lt;br&gt;
+&lt;/i&gt;&lt;/b&gt;&lt;span style="line-height: 1.5;"&gt;Pedreira e Bem Barato: R$ 2,99 &lt;br&gt;
+&lt;/span&gt;&lt;span style="line-height: 1.5;"&gt;St. Marche: R$ 3,79 (+26,75%) &lt;br&gt;
+&lt;/span&gt;&lt;span style="line-height: 1.5;"&gt;Pão de Açúcar: R$ 4,09 (&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;+36,78%&lt;/span&gt;&lt;span style="line-height: 1.5;"&gt;)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-78" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_480/v1381947749/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1739_iamd27.jpg" width="480" height="640"&gt; &lt;br&gt;
+&lt;b&gt;&lt;i&gt;Amaciante Downy Concentrado 500ml &lt;br&gt;
+&lt;/i&gt;&lt;/b&gt;&lt;span style="line-height: 1.5;"&gt;Pedreira e Bem Barato: R$ 4,99 &lt;br&gt;
+&lt;/span&gt;&lt;span style="line-height: 1.5;"&gt;Pão de Açúcar: R$ 5,99 (+20,04%) &lt;br&gt;
+&lt;/span&gt;&lt;span style="line-height: 1.5;"&gt;St. Marche: R$ 7,99 (&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;+60,12%&lt;/span&gt;&lt;span style="line-height: 1.5;"&gt;)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;E, por fim, o grande campeão!&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-79" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_480/v1381947736/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1740_yiz7vk.jpg" width="480" height="640"&gt; &lt;br&gt;
+&lt;b&gt;&lt;i&gt;Chocolate em pó solúvel Nestlé 200g&lt;/i&gt;&lt;/b&gt; &lt;br&gt;
+Pedreira e Bem Barato: R$ 5,99 &lt;br&gt;
+St. Marche: R$ 9,39 (+&lt;span style="color: #000000;"&gt;56,76%&lt;/span&gt;) &lt;br&gt;
+Pão de Açúcar - delivery: R$ 9,99 (+66,77%) &lt;br&gt;
+Extra.com.br - delivery: R$ 10,40 (&lt;span style="color: #ff0000;"&gt;+73,62%&lt;/span&gt;)&lt;/p&gt;</description><link>http://luizfaias.com/pao-de-acucar-lugar-de-gente-feliz/</link><guid isPermaLink="false">c24b0450-6f3f-4aa0-8596-f31aee371a96</guid><category>capitalismo</category><dc:creator>Luiz Faias</dc:creator><pubDate>Sun, 13 Oct 2013 15:00:00 GMT</pubDate></item><item><title>Mudança de faixa no Aikido (3º kyu)</title><description>&lt;p&gt;No último domingo aconteceu mais um exame de faixa da &lt;a href="http://www.febrai.com.br/" target="_blank"&gt;Febrai (Federação Brasileira de Aikido)&lt;/a&gt;. Dessa vez no &lt;a href="http://shobudojo.com.br/unidade-tatuape" target="_blank"&gt;Espaço Shobu Dojo do Tatuapé&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Prestei o exame para o 3º kyu (faixa verde). Estava bastante nervoso mas tudo ocorreu bem e consegui passar por mais esse desafio :D&lt;/p&gt;
+
+&lt;p&gt;Agradeço ao sensei Severino, sensei Wagner e especialmente à &lt;a href="http://onegai-blog.blogspot.com.br/" target="_blank"&gt;sensei Soraya&lt;/a&gt; pela paciência ao longo desse caminho evolutivo. Já se passaram 3 anos de treino e ainda sinto que não sei nada! Acho que as coisas &lt;strong&gt;começam&lt;/strong&gt; a fazer sentido mesmo depois da faixa preta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-68" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947862/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1684_faaggw.jpg" width="640" height="480"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-70" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947854/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1692_efmffr.jpg" width="640" height="480"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-71" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947847/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1699_zf7moj.jpg" width="640" height="480"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="alignnone wp-image-72" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947840/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1701_p9ogbo.jpg" width="640" height="480"&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description><link>http://luizfaias.com/mudanca-de-faixa-no-aikido-3o-kyu/</link><guid isPermaLink="false">4be4296b-0ac2-4957-9770-5cb361f823fe</guid><category>aikido</category><dc:creator>Luiz Faias</dc:creator><pubDate>Thu, 03 Oct 2013 20:53:00 GMT</pubDate></item></channel></rss>
