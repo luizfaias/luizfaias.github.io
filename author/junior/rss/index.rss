@@ -1,4 +1,24 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Luiz Faias - Luiz Faias</title><description>Luiz Faias - Luiz Faias</description><link>http://luizfaias.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Sat, 14 Mar 2015 16:14:52 GMT</lastBuildDate><atom:link href="http://luizfaias.com/author/junior/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Como manter um blog incrivelmente rápido e gratuito com Ghost, Buster e Github Pages</title><description>&lt;p&gt;Já falei anteriormente sobre o &lt;a href="http://luizfaias.com/ghost-uma-plataforma-para-blogs-gratuita-e-facil-de-usar"&gt;Ghost, a plataforma que utilizo&lt;/a&gt; para publicar este singelo blog.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Luiz Faias - Luiz Faias</title><description>Luiz Faias - Luiz Faias</description><link>http://luizfaias.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Sat, 16 May 2015 00:21:50 GMT</lastBuildDate><atom:link href="http://luizfaias.com/author/junior/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Shopify: enviando código de rastreamento dos Correios</title><description>&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_500/v1431735232/shopify_correios_fxtrt0.png" alt="Shopify + Correios"&gt;&lt;/p&gt;
+
+&lt;p&gt;Estou usando o &lt;a href="https://www.shopify.com/?ref=luizfaias"&gt;Shopify&lt;/a&gt; para a &lt;a href="http://tatifaias.com/"&gt;loja virtual de materiais para bordado da Tati&lt;/a&gt; e hoje tive a necessidade de enviar às clientes o código de rastreamento dos Correios (para quando estivermos no Brasil).&lt;/p&gt;
+
+&lt;p&gt;Como não há uma integração pronta, personalizei o email de confirmação de pedidos de acordo com as informações deste artigo: &lt;a href="https://docs.shopify.com/support/settings/shipping/why-is-my-shipping-provider-not-listed-when-i-fulfill-an-order"&gt;https://docs.shopify.com/support/settings/shipping/why-is-my-shipping-provider-not-listed-when-i-fulfill-an-order&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Segue o código abaixo. Espero que ajude ;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% if fulfillment.tracking_numbers.size &amp;gt; 0 %}
+  &amp;lt;p&amp;gt;Aqui está o código de rastreamento:
+  &amp;lt;b&amp;gt;{{ fulfillment.tracking_numbers.first }}&amp;lt;/b&amp;gt;.
+
+  {% if fulfillment.tracking_company and fulfillment.tracking_company != 'Other' %}
+    &amp;lt;a href="{{ fulfillment.tracking_urls.first }}"&amp;gt;Para acompanhar o andamento da entrega, clique aqui.&amp;lt;/a&amp;gt;
+  {% else %}
+    &amp;lt;a href="http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&amp;amp;P_COD_UNI={{ fulfillment.tracking_numbers.first }}"&amp;gt;Para acompanhar o andamento da entrega, clique aqui.&amp;lt;/a&amp;gt;
+  {% endif %}
+
+  &amp;lt;/p&amp;gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;</description><link>http://luizfaias.com/shopify-enviando-codigo-de-rastreamento-dos-correios/</link><guid isPermaLink="false">d7da0f90-c1fe-43a8-a181-8b62c7ef8e7f</guid><dc:creator>Luiz Faias</dc:creator><pubDate>Sat, 16 May 2015 00:20:39 GMT</pubDate></item><item><title>Como manter um blog incrivelmente rápido e gratuito com Ghost, Buster e Github Pages</title><description>&lt;p&gt;Já falei anteriormente sobre o &lt;a href="http://luizfaias.com/ghost-uma-plataforma-para-blogs-gratuita-e-facil-de-usar"&gt;Ghost, a plataforma que utilizo&lt;/a&gt; para publicar este singelo blog.&lt;/p&gt;
 
 &lt;p&gt;Agora quero mostrar como é possível hospedá-lo gratuitamente e deixá-lo incrivelmente rápido, para que você possa fazer o mesmo.&lt;/p&gt;
 
@@ -351,18 +371,4 @@ Pão de Açúcar: R$ 6,49 (&lt;span style="color: #ff0000;"&gt;+35,49%&lt;/span&
 Pedreira e Bem Barato: R$ 5,99 &lt;br&gt;
 St. Marche: R$ 9,39 (+&lt;span style="color: #000000;"&gt;56,76%&lt;/span&gt;) &lt;br&gt;
 Pão de Açúcar - delivery: R$ 9,99 (+66,77%) &lt;br&gt;
-Extra.com.br - delivery: R$ 10,40 (&lt;span style="color: #ff0000;"&gt;+73,62%&lt;/span&gt;)&lt;/p&gt;</description><link>http://luizfaias.com/pao-de-acucar-lugar-de-gente-feliz/</link><guid isPermaLink="false">c24b0450-6f3f-4aa0-8596-f31aee371a96</guid><category>capitalismo</category><dc:creator>Luiz Faias</dc:creator><pubDate>Sun, 13 Oct 2013 15:00:00 GMT</pubDate></item><item><title>Mudança de faixa no Aikido (3º kyu)</title><description>&lt;p&gt;No último domingo aconteceu mais um exame de faixa da &lt;a href="http://www.febrai.com.br/" target="_blank"&gt;Febrai (Federação Brasileira de Aikido)&lt;/a&gt;. Dessa vez no &lt;a href="http://shobudojo.com.br/unidade-tatuape" target="_blank"&gt;Espaço Shobu Dojo do Tatuapé&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Prestei o exame para o 3º kyu (faixa verde). Estava bastante nervoso mas tudo ocorreu bem e consegui passar por mais esse desafio :D&lt;/p&gt;
-
-&lt;p&gt;Agradeço ao sensei Severino, sensei Wagner e especialmente à &lt;a href="http://onegai-blog.blogspot.com.br/" target="_blank"&gt;sensei Soraya&lt;/a&gt; pela paciência ao longo desse caminho evolutivo. Já se passaram 3 anos de treino e ainda sinto que não sei nada! Acho que as coisas &lt;strong&gt;começam&lt;/strong&gt; a fazer sentido mesmo depois da faixa preta.&lt;/p&gt;
-
-&lt;p&gt;&lt;img class="alignnone wp-image-68" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947862/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1684_faaggw.jpg" width="640" height="480"&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img class="alignnone wp-image-70" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947854/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1692_efmffr.jpg" width="640" height="480"&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img class="alignnone wp-image-71" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947847/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1699_zf7moj.jpg" width="640" height="480"&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img class="alignnone wp-image-72" alt="" src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_640/v1381947840/http_luizfaias_com_wp-content_uploads_2013_10_IMG_1701_p9ogbo.jpg" width="640" height="480"&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description><link>http://luizfaias.com/mudanca-de-faixa-no-aikido-3o-kyu/</link><guid isPermaLink="false">4be4296b-0ac2-4957-9770-5cb361f823fe</guid><category>aikido</category><dc:creator>Luiz Faias</dc:creator><pubDate>Thu, 03 Oct 2013 20:53:00 GMT</pubDate></item></channel></rss>
+Extra.com.br - delivery: R$ 10,40 (&lt;span style="color: #ff0000;"&gt;+73,62%&lt;/span&gt;)&lt;/p&gt;</description><link>http://luizfaias.com/pao-de-acucar-lugar-de-gente-feliz/</link><guid isPermaLink="false">c24b0450-6f3f-4aa0-8596-f31aee371a96</guid><category>capitalismo</category><dc:creator>Luiz Faias</dc:creator><pubDate>Sun, 13 Oct 2013 15:00:00 GMT</pubDate></item></channel></rss>
