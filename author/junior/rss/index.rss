@@ -1,4 +1,58 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Luiz Faias - Luiz Faias</title><description>Luiz Faias - Luiz Faias</description><link>http://luizfaias.com/</link><generator>Ghost 0.6</generator><lastBuildDate>Fri, 30 Oct 2015 13:56:33 GMT</lastBuildDate><atom:link href="http://luizfaias.com/author/junior/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>GVCast: o podcast brasileiro que você não pode perder</title><description>&lt;p&gt;Essa é uma &lt;strong&gt;propaganda gratuita&lt;/strong&gt; para o melhor podcast brasileiro que conheço, o &lt;a href="http://geracaodevalor.com.br/gvcast"&gt;GVCast&lt;/a&gt;. A indicação para baixá-lo veio do &lt;a href="http://andrefaria.com"&gt;André Faria&lt;/a&gt;. Valeu bicho!&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Luiz Faias - Luiz Faias</title><description>Luiz Faias - Luiz Faias</description><link>http://luizfaias.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Mon, 21 Dec 2015 17:02:24 GMT</lastBuildDate><atom:link href="http://luizfaias.com/author/junior/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Desenvolvimento de software não é um emprego</title><description>&lt;p&gt;Ser um desenvolvedor de software não é um &lt;strong&gt;emprego&lt;/strong&gt;. É uma &lt;strong&gt;profissão&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Artigo traduzido do blog do Richard Clayton, com o título: &lt;br&gt;
+&lt;em&gt;Software Engineering is not a Job. It's a Profession.&lt;/em&gt;
+&lt;a href="https://rclayton.silvrback.com/software-engineering-is-not-a-job-it-s-a-profession"&gt;https://rclayton.silvrback.com/software-engineering-is-not-a-job-it-s-a-profession&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;obs: decidi traduzir &lt;em&gt;Software Engineer&lt;/em&gt; para &lt;em&gt;Programador&lt;/em&gt;, dando um sentido pejorativo mesmo&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;Aviso&lt;/strong&gt; -&lt;/p&gt;</description><link>http://luizfaias.com/desenvolvimento-de-software-nao-e-um-emprego/</link><guid isPermaLink="false">b2ef27e9-3e9d-4a6b-89fe-a4ca487ba7c4</guid><category>tecnologia</category><category>programação</category><dc:creator>Luiz Faias</dc:creator><pubDate>Mon, 21 Dec 2015 17:01:59 GMT</pubDate><content:encoded>&lt;p&gt;Ser um desenvolvedor de software não é um &lt;strong&gt;emprego&lt;/strong&gt;. É uma &lt;strong&gt;profissão&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Artigo traduzido do blog do Richard Clayton, com o título: &lt;br&gt;
+&lt;em&gt;Software Engineering is not a Job. It's a Profession.&lt;/em&gt;
+&lt;a href="https://rclayton.silvrback.com/software-engineering-is-not-a-job-it-s-a-profession"&gt;https://rclayton.silvrback.com/software-engineering-is-not-a-job-it-s-a-profession&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;obs: decidi traduzir &lt;em&gt;Software Engineer&lt;/em&gt; para &lt;em&gt;Programador&lt;/em&gt;, dando um sentido pejorativo mesmo&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;strong&gt;Aviso&lt;/strong&gt; - esse é um protesto sobre aqueles 10-20% de profissionais da área de software que dão uma má reputação ao resto da nossa comunidade.&lt;/p&gt;
+
+&lt;p&gt;Uma das coisas que mais me perturba em nossa área é o &lt;em&gt;Programador 9-5&lt;/em&gt;. Um &lt;em&gt;Programador 9-18&lt;/em&gt; (ou desenvolvedor) é alguém que vê sua posição simplesmente como uma maneira para pagar as contas. Para eles, quase não há paixão pelo design a criação de software; em vez disso, seu dia é simplesmente uma coleção de tarefas que precisam ser completadas para que eles se mantenham empregados.&lt;/p&gt;
+
+&lt;p&gt;Penso que essa atitude em relação ao trabalho seja algo natural. Poucas pessoas têm paixão por trabalhar em um lugar que pague pouco como o McDonald's. Contudo, por quê alguém passaria por anos de estudo e treinamentos em uma área que não gosta?&lt;/p&gt;
+
+&lt;p&gt;Através de minha observação, percebi que trabalhadores geralmente se encaixam em uma de três categorias:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Apaixonados por seu trabalho.  &lt;/li&gt;
+&lt;li&gt;Apaixonados pela área, mas indiferentes à posição que ocupam ou ao empregador.  &lt;/li&gt;
+&lt;li&gt;Apaixonados por seus hobbies (o trabalho é apenas um meio para mantê-los).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Falando sobre engenharia de software, eu entendo as duas primeiras perspectivas. A terceira, porém, não faz sentido pra mim. Se existe algo em que você tem mais paixão/prazer em fazer, por que não tentar algo nessa área de &lt;em&gt;expertise&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;Entendo que não é tão simples quanto parece. Obviamente nem todo hobby permite que você suporte uma família tão bem quanto um emprego que pague bem no mercado de software.&lt;/p&gt;
+
+&lt;p&gt;Entretanto, se você é um &lt;em&gt;Programador 9-18&lt;/em&gt;, e considera essa denominação ofensiva, deixe-me fazer outra pergunta:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Você escolheria em sã consciência um &lt;em&gt;Cirurgião 9-18&lt;/em&gt; para te operar?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Você contrataria um &lt;em&gt;Arquiteto 9-18&lt;/em&gt; para desenhar a sua casa? Gostaria que um &lt;em&gt;Bombeiro 9-18&lt;/em&gt; atendesse o seu bairro? Gostaria que um &lt;em&gt;Técnico de futebol 9-18&lt;/em&gt; liderasse o time dos seus filhos?&lt;/p&gt;
+
+&lt;p&gt;É claro que não! Queremos sempre encontrar pessoas apaixonadas em prover esses serviços. Na maior parte das vezes, a razão pela qual buscamos pessoas apaixonadas pelo que fazem é porque há grande chance delas serem bem informadas e experientes em suas áreas. Cumprir um turno de trabalho por obrigação não favorece que o indivíduo aumente seu conhecimento sobre determinada ocupação.&lt;/p&gt;
+
+&lt;p&gt;Se você prestar atenção às áreas de Direito, Arquitetura, Educação e atividades que envolvam risco de vida como Bombeiro e Policial, verá que existe um grande esforço de treinamentos em que esses profissionais devem se submeter para manter suas licenças e certificações. Algumas dessas áreas oferecem o privilégio aos profissionais de dedicarem tempo a manterem sua proficiência. Engenharia de software tipicamente não oferece o mesmo. Isso se deve à ser um campo novo, em constante mudança e incrivelmente diverso.&lt;/p&gt;
+
+&lt;p&gt;Para se manter atualizado com práticas modernas, acredito que um engenheiro de software deva ler publicações relevantes, manuais técnicos, brincar com novas tecnologias, e manter-se ativo em comunidades. Dúvido que isso seja possível se você não dedicar pelo menos um pouco do seu tempo livre pesquisando ou brincando com software.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;É isso aí. Fique a vontade para criticar, apoiar ou comentar aqui em baixo. Até a próxima ;-)&lt;/p&gt;</content:encoded></item><item><title>GVCast: o podcast brasileiro que você não pode perder</title><description>&lt;p&gt;Essa é uma &lt;strong&gt;propaganda gratuita&lt;/strong&gt; para o melhor podcast brasileiro que conheço, o &lt;a href="http://geracaodevalor.com.br/gvcast"&gt;GVCast&lt;/a&gt;. A indicação para baixá-lo veio do &lt;a href="http://andrefaria.com"&gt;André Faria&lt;/a&gt;. Valeu bicho!&lt;/p&gt;
 
 &lt;p&gt;É a primeira vez que falo sobre podcasts aqui, e espero que não seja a única. Torço para que, a partir dessa iniciativa, muitos outros programas&lt;/p&gt;</description><link>http://luizfaias.com/gvcast-o-podcast-brasileiro-que-voce-nao-pode-perder/</link><guid isPermaLink="false">64abd86a-0b97-4d86-b184-a76e4d1dea63</guid><category>podcast</category><category>empreendedorismo</category><dc:creator>Luiz Faias</dc:creator><pubDate>Mon, 28 Sep 2015 01:47:52 GMT</pubDate><content:encoded>&lt;p&gt;Essa é uma &lt;strong&gt;propaganda gratuita&lt;/strong&gt; para o melhor podcast brasileiro que conheço, o &lt;a href="http://geracaodevalor.com.br/gvcast"&gt;GVCast&lt;/a&gt;. A indicação para baixá-lo veio do &lt;a href="http://andrefaria.com"&gt;André Faria&lt;/a&gt;. Valeu bicho!&lt;/p&gt;
 
@@ -308,7 +362,7 @@ Qual é a razão de tudo isso?&lt;/p&gt;
 
 &lt;p&gt;E você? Quer continuar fazendo parte do crescente grupo de pessoas que não acham sentido em seu trabalho?&lt;/p&gt;
 
-&lt;iframe width="560" height="315" src="http://luizfaias.com//www.youtube.com/embed/1y6417fnIKU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>Não quero mais</title><description>&lt;p&gt;não quero mais...&lt;/p&gt;
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/1y6417fnIKU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content:encoded></item><item><title>Não quero mais</title><description>&lt;p&gt;não quero mais...&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;torcer&lt;/strong&gt; pelo "meu" time &lt;br&gt;
 &lt;strong&gt;acompanhar&lt;/strong&gt; a novela &lt;br&gt;
@@ -396,38 +450,4 @@ Qual é a razão de tudo isso?&lt;/p&gt;
 
 &lt;p&gt;Fácil, não?&lt;/p&gt;
 
-&lt;p&gt;:D&lt;/p&gt;</content:encoded></item><item><title>Sem ilusão não há iluminação</title><description>&lt;p&gt;Este artigo será o primeiro de uma série polêmica, que trará à tona questionamentos sobre crenças que temos desde pequenos, ou perguntas que nunca nos fizemos.&lt;/p&gt;
-
-&lt;p&gt;Só pelo prazer de escrever. Só pela zueira (que não tem limites).&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Quem somos e o que estamos fazendo aqui? &lt;br&gt;
-Qual é o motivo&lt;/p&gt;</description><link>http://luizfaias.com/sem-ilusao-nao-ha-iluminacao/</link><guid isPermaLink="false">efa84c51-f25f-4478-8eee-881dba408523</guid><category>filosofia</category><category>budismo</category><category>matrix</category><dc:creator>Luiz Faias</dc:creator><pubDate>Wed, 30 Oct 2013 03:48:00 GMT</pubDate><media:content url="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_1400/v1413920029/Depositphotos_7234649_XL_fllzm3.jpg" medium="image"/><content:encoded>&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/c_scale,w_1400/v1413920029/Depositphotos_7234649_XL_fllzm3.jpg" alt="Sem ilusão não há iluminação"&gt;&lt;p&gt;Este artigo será o primeiro de uma série polêmica, que trará à tona questionamentos sobre crenças que temos desde pequenos, ou perguntas que nunca nos fizemos.&lt;/p&gt;
-
-&lt;p&gt;Só pelo prazer de escrever. Só pela zueira (que não tem limites).&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Quem somos e o que estamos fazendo aqui? &lt;br&gt;
-Qual é o motivo de tudo "existir"?&lt;/p&gt;
-
-&lt;p&gt;Hoje em dia temos um sistema consumista tão manipulador, que são poucos aqueles que despertam para tais questões e buscam "sair da caverna", onde permaneceram a vida inteira.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://res.cloudinary.com/luizfaias-com/image/upload/v1383102579/ilustracao-mito-da-caverna_wtf58l.jpg" alt="Sem ilusão não há iluminação"&gt;&lt;/p&gt;
-
-&lt;p&gt;Compilando estudos de algumas fontes, como o budismo, taoísmo e a teosofia chego até a seguinte explicação: estamos "aqui" pois não fomos capazes de superar a matéria.&lt;/p&gt;
-
-&lt;p&gt;Nós criamos a nossa própria realidade. Prova disso são as doenças que criamos (sim, é isso mesmo) e que um dia simplesmente se manifestam em nosso corpo. Nesse momento nos colocamos na postura de vítimas, como se não tivéssemos nenhuma parcela de responsabilidade sobre o fato. Outro bom exemplo é o placebo, que "cura" aquele que acredita que algo que está fora resolverá os problemas que estão dentro.&lt;/p&gt;
-
-&lt;p&gt;Não sei dizer onde encontrei a frase &lt;strong&gt;&lt;em&gt;"sem ilusão não há iluminação"&lt;/em&gt;&lt;/strong&gt; mas ela aparece frequentemente em meus pensamentos.&lt;/p&gt;
-
-&lt;p&gt;A frase acima começa a fazer algum sentido quando associamos antigos ensinamentos das filosofias orientais com o que se conhece hoje em dia sobre as cordas dentro da física quântica. A matéria, como a imaginamos, não tem como "existir". Existe muito mais "vazio" dentro de um átomo do que matéria propriamente dita. Assim também é o pouco que conhecemos sobre o universo.&lt;/p&gt;
-
-&lt;p&gt;Para não tornar esse texto uma novela tentarei concluir o raciocínio: estamos neste mundo da &lt;strong&gt;ilusão&lt;/strong&gt; para aprender lições valiosas, que um dia nos conduzirão ao estado de &lt;strong&gt;iluminação&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Seguindo essa linha podemos dizer que o tempo não existe; que a vida e a morte também não existem, pois são faces da mesma moeda. Tudo isso é produzido pela mente limitada que temos, mas isso fica para um próximo texto.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Obs: se você não concorda com parte ou com tudo o que escrevi previamente, você está no seu direito. Não estou me preocupando com a citação de fontes. Estou totalmente aberto a discutir e mudar de opinião a qualquer momento. Não me envergonharei ao descobrir que tudo isso era bobagem.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;:D&lt;/p&gt;</content:encoded></item></channel></rss>
